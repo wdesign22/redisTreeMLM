@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Mlmusers list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Ancestor</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for mlmUser in mlmUsers %}
+            <tr>
+                <td><a href="{{ path('redis_show', { 'id': mlmUser.id }) }}">{{ mlmUser.id }}</a></td>
+                <td>{{ mlmUser.name }}</td>
+                <td>{{ mlmUser.ancestor }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('redis_show', { 'id': mlmUser.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('redis_edit', { 'id': mlmUser.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('redis_new') }}">Create a new mlmUser</a>
+        </li>
+    </ul>
+{% endblock %}

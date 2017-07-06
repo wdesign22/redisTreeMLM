@@ -1,0 +1,4 @@
+services:
+#    redis_tree.example:
+#        class: RedisTreeBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

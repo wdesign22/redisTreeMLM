@@ -1,0 +1,7 @@
+eugene_blog_post:
+    resource: "@EugeneBlogBundle/Resources/config/routing/post.yml"
+    prefix:   /post
+
+eugene_blog_homepage:
+    path:     /
+    defaults: { _controller: EugeneBlogBundle:Default:index }

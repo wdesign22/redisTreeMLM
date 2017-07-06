@@ -1,0 +1,17 @@
+redis_tree:
+    resource: "@RedisTreeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+eugene_blog2:
+    resource: "@EugeneBlog2Bundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+eugene_blog:
+    resource: "@EugeneBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
